@@ -2,7 +2,6 @@
 layout: page
 permalink: /meet/
 title: Google Meet
-nav: flase
 redirect: true
 ---
 
