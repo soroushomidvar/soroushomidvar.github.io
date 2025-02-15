@@ -3,6 +3,8 @@ layout: page
 permalink: /awards.html
 title: "Awards"
 description: ""
+nav: true
+nav_order: 4
 redirect: false
 ---
 <p>
