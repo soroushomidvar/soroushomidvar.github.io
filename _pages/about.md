@@ -10,7 +10,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Department of Computing Science</p>
+    <p>Computing Science Department</p>
     <p>University of Alberta</p>
     <p>Edmonton, Alberta, Canada T6G 2E8</p>
 
