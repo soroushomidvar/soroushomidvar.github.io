@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /awards.html
+permalink: /awards/
 title: "Awards"
 description: ""
 nav: true
