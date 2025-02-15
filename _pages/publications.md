@@ -7,15 +7,9 @@ nav: true
 nav_order: 3
 ---
 
-<h1>You are being redirected...</h1>
-    <script>
-        setTimeout(() => {
-            window.location.href = "https://scholar.google.com/citations?user=Nv4Sc0QAAAAJ&hl=en";
-        }, 1); // 5000: Redirect after 5 seconds
-    </script>
-    <p>If you are not redirected automatically, click
-<a href="https://scholar.google.com/citations?user=Nv4Sc0QAAAAJ&hl=en" target="_blank">here</a>.
-</p>
+<meta http-equiv="refresh" content="0;url=https://scholar.google.com/citations?user=Nv4Sc0QAAAAJ&hl=en">
+
+If you are not redirected automatically, click <a href="https://scholar.google.com/citations?user=Nv4Sc0QAAAAJ&hl=en" target="_blank">here</a>.
 
 <!-- _pages/publications.md -->
 
