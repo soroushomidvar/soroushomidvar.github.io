@@ -32,7 +32,7 @@ I am a Ph.D. student in Computing Science at the University of Alberta and a mem
 
 Below is a word cloud of my recently published papers:
 
-![Word Cloud](wordcloud.jpg)
+![Word Cloud](https://soroushomidvar.github.io/assets/img/wordcloud.jpg)
 
 <!---
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
