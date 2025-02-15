@@ -5,7 +5,6 @@ title: Publications
 description: 
 nav: true
 nav_order: 3
-redirect: true
 ---
 
 <h1>You are being redirected...</h1>
