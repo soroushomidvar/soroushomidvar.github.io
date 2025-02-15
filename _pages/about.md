@@ -32,7 +32,7 @@ I am a Ph.D. student in Computing Science at the University of Alberta and a mem
 
 Below is a word cloud of my recently published papers:
 
-<img src="https://soroushomidvar.github.io/assets/img/wordcloud.jpg" style="width: 100%;" alt="Word Cloud">
+<img src="https://soroushomidvar.github.io/assets/img/wordcloud.jpg" style="width: 70%;" alt="Word Cloud">
 
 
 <!---
