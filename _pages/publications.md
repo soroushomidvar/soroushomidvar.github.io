@@ -10,7 +10,7 @@ redirect: true
 
 <meta http-equiv="refresh" content="0; url={{https://scholar.google.com/citations?user=Nv4Sc0QAAAAJ&hl=en}}" />
 
-You will be redirected instantly. If not redirected, please go back to the [Google Scholar]({{https://scholar.google.com/citations?user=Nv4Sc0QAAAAJ&hl=en}}).
+You will be redirected instantly. If not redirected, please go to [Google Scholar]({{https://scholar.google.com/citations?user=Nv4Sc0QAAAAJ&hl=en}}).
 
 <!-- _pages/publications.md -->
 
