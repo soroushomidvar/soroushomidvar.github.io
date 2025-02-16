@@ -59,6 +59,17 @@ ninja.data = [{
           window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
         
       },
+    },{id: "post-latex-learning-v1-0",
+      
+        title: "LaTeX Learning v1.0",
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/posts/2020-11-30-latex-v1/";
+        
+      },
     },{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
