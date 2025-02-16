@@ -59,11 +59,11 @@ ninja.data = [{
           window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
         
       },
-    },{id: "post-latex-learning-v1-0",
+    },{id: "post-latex-learning",
       
-        title: "LaTeX Learning v1.0",
+        title: "LaTeX Learning",
       
-      description: "",
+      description: "v1.0",
       section: "Posts",
       handler: () => {
         
