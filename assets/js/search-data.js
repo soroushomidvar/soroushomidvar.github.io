@@ -41,22 +41,22 @@ ninja.data = [{
       
         title: "LaTeX Learning",
       
+      description: "v2.1",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/posts/latex-v2/";
+        
+      },
+    },{id: "post-latex-learning",
+      
+        title: "LaTeX Learning",
+      
       description: "v1.0",
       section: "Posts",
       handler: () => {
         
           window.location.href = "/posts/2020-11-30-latex-v1/";
-        
-      },
-    },{id: "post-a-post-with-formatting-and-links",
-      
-        title: "a post with formatting and links",
-      
-      description: "march &amp; april, looking forward to summer",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2015/formatting-and-links/";
         
       },
     },{id: "news-a-simple-inline-announcement",
