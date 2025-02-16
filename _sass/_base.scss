@@ -397,49 +397,49 @@ ul.task-list input[type="checkbox"] {
 
 // Social (bottom)
 
-.social {
-  text-align: center;
+// .social {
+//   text-align: center;
 
-  .contact-icons {
-    font-size: 4rem;
+//   .contact-icons {
+//     font-size: 4rem;
 
-    a {
-      img {
-        width: 2.2rem;
-        height: 2.2rem;
-        margin-bottom: 1rem;
-      }
+//     a {
+//       img {
+//         width: 2.2rem;
+//         height: 2.2rem;
+//         margin-bottom: 1rem;
+//       }
 
-      svg {
-        width: 2.5rem;
-        height: 3rem;
-        margin-bottom: 0.5rem;
+//       svg {
+//         width: 2.5rem;
+//         height: 3rem;
+//         margin-bottom: 0.5rem;
 
-        image {
-          width: 2.5rem;
-          height: 2.5rem;
-        }
-      }
+//         image {
+//           width: 2.5rem;
+//           height: 2.5rem;
+//         }
+//       }
 
-      i::before {
-        color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
-      }
+//       i::before {
+//         color: var(--global-text-color);
+//         transition-property: all 0.2s ease-in-out;
+//       }
 
-      &:hover {
-        text-decoration: none;
+//       &:hover {
+//         text-decoration: none;
 
-        i::before {
-          color: var(--global-theme-color);
-        }
-      }
-    }
-  }
+//         i::before {
+//           color: var(--global-theme-color);
+//         }
+//       }
+//     }
+//   }
 
-  .contact-note {
-    font-size: 0.8rem;
-  }
-}
+//   .contact-note {
+//     font-size: 0.8rem;
+//   }
+// }
 
 .wechat-modal {
   display: none;
