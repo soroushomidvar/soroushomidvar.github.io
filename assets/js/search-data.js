@@ -37,11 +37,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-latex-learning",
+        },{id: "post-latex-learning-v2-1",
       
-        title: "LaTeX Learning",
+        title: "LaTeX Learning v2.1",
       
-      description: "v2.1",
+      description: "A quick guide to writing with LaTeX",
       section: "Posts",
       handler: () => {
         
