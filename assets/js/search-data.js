@@ -41,7 +41,7 @@ ninja.data = [{
       
         title: "LaTeX Learning v2.1",
       
-      description: "A quick guide to writing with LaTeX",
+      description: "Learn LaTeX step by step with easy examples",
       section: "Posts",
       handler: () => {
         
