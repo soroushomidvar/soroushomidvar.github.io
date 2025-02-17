@@ -8,6 +8,8 @@
 # dblp_url: # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
 email: s.omidvartehrani@ualberta.ca # your email address
+linkedin_username: soroushomidvar # your LinkedIn user name
+scholar_userid: Nv4Sc0QAAAAJ # your Google Scholar ID
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
 github_username: soroushomidvar # your GitHub user name
@@ -20,7 +22,6 @@ github_username: soroushomidvar # your GitHub user name
 # lastfm_id: # your lastfm id
 # lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 # leetcode_id: # your LeetCode id
-linkedin_username: soroushomidvar # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
 orcid_id: 0000-0002-3390-5194 # your ORCID ID
@@ -30,7 +31,6 @@ orcid_id: 0000-0002-3390-5194 # your ORCID ID
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
 # rss_icon: false # set to true to show the RSS icon
-scholar_userid: Nv4Sc0QAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id
