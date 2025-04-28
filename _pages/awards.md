@@ -8,6 +8,9 @@ nav_order: 4
 redirect: false
 ---
 <p>
+  - Graduate Student Teaching Award, University of Alberta
+</p>
+<p>
   - Alberta Innovates Graduate Student Scholarship (AIGSS), University of Alberta
 </p>
 <p>
