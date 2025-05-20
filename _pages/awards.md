@@ -8,7 +8,7 @@ nav_order: 4
 redirect: false
 ---
 <p>
-  - <a href="https://soroushomidvar.github.io/assets/img/Teaching-Award.jpg"> Graduate Student Teaching Award, University of Alberta</a>
+  - <a href="https://soroushomidvar.github.io/assets/img/Teaching-Award.jpg"> Graduate Student Teaching Award, University of Alberta </a>
 </p>
 <p>
   - Alberta Innovates Graduate Student Scholarship (AIGSS), University of Alberta
