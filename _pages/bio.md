@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. student in Computing Science at the University of Alberta and a member of the university’s DB lab. I graduated with B.Sc. and M.Sc. degrees in Computer Engineering from Ferdowsi University of Mashhad in 2017 and 2021, respectively. My research interests focus on data integration and explainability.
+I am a Ph.D. student in Computing Science at the University of Alberta and a member of the university’s DB lab. I graduated with B.Sc. and M.Sc. degrees in Computer Engineering from Ferdowsi University of Mashhad in 2017 and 2021, respectively. My research interests focus on data wrangling and explainability.
 
 Below is a word cloud of my recently published papers:
 
