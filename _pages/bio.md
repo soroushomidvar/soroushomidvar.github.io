@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Ph.D. candidate in Computing Science at the University of Alberta, researching example-driven data wrangling.
+Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [University of Alberta](http://www.ualberta.ca), researching example-driven data wrangling.
 
 Word cloud from my recent papers:
 
