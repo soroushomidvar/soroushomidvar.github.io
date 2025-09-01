@@ -38,7 +38,7 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 
 <img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 99%;" alt="Word Cloud">
 
-Last update: Sep 2025
+Last update: Aug 2025
 
 <!---
 <img src="https://soroushomidvar.github.io/assets/img/wordcloud.jpg" style="width: 65%;" alt="Word Cloud">
