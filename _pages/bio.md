@@ -49,7 +49,7 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 **FUMBOT: Design, Implementation and Detection.** *Soroush Omidvartehrani*, Haleh Amintoosi. 9th OIC-CERT Annual Conference & 4th Conference on Cyberspace Security Incidents and Vulnerabilities, 2018, Shiraz, Iran.
 
 
-##  Word Cloud
+##  Recent Work in Words
 
 <img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 99%;" alt="Word Cloud">
 
