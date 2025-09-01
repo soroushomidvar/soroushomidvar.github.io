@@ -26,6 +26,8 @@ latest_posts:
 
 Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [University of Alberta](http://www.ualberta.ca), researching example-driven data wrangling.
 
+<br><br><br>
+
 ## Recent Publications
 
 **WebTableX: Efficiently Discovering Web Table Transformations Through Sampling.** *Soroush Omidvartehrani*, Arash Dargahi Nobari, Davood Rafiei. Web Conference (WWW) 2025, Sydney, Australia.
