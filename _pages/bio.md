@@ -26,6 +26,7 @@ latest_posts:
 
 Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [University of Alberta](http://www.ualberta.ca), researching example-driven data wrangling. Specifically, I study how to automate wrangling tasks such as data transformation and missing data imputation using a zoom-in/zoom-out approach: zooming in on a few informative examples that hold enough information for the task, and zooming out to generalize and apply the learned patterns across the data.
 
+<br>
 
 ## Recent Publications
 
@@ -34,6 +35,8 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 **GXJoin: Generalized Cell Transformations for Explainable Joinability.** *Soroush Omidvartehrani*, Arash Dargahi Nobari, Davood Rafiei. European Conference on Advances in Databases and Information Systems (ADBIS) 2024, Bayonne, France.
 
 **Discovering and Integrating Tabular Data.** Davood Rafiei, Arash Dargahi Nobari, *Soroush Omidvartehrani*. Tabular Data Analysis (TaDA) Workshop @ VLDB 2023, Vancouver, Canada.
+
+<br>
 
 ##  Papers in Words
 
