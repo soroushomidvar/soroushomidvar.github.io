@@ -35,7 +35,7 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 **Discovering and Integrating Tabular Data.** Davood Rafiei, Arash Dargahi Nobari, *Soroush Omidvartehrani*. Tabular Data Analysis (TaDA) Workshop @ VLDB 2023, Vancouver, Canada.
 
 
-##  Recent Work in Words
+##  Papers in Words
 
 <img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 99%;" alt="Word Cloud">
 
