@@ -37,7 +37,7 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <p style="flex: 1;">Ph.D. candidate in Computing Science at the University of Alberta, researching example-driven data wrangling.</p>
-  <img src="[path/to/your/image.jpg](https://soroushomidvar.com/assets/img/prof_pic-480.webp)" alt="Image" style="width: 30%; margin-left: 10px;">
+  <img src="https://soroushomidvar.com/assets/img/prof_pic-480.webp" alt="Image" style="width: 30%; margin-left: 10px;">
 </div>
 
 
