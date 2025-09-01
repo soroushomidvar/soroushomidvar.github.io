@@ -32,31 +32,32 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 
 ## Publications
 
-WebTableX: Efficiently Discovering Web Table Transformations Through Sampling. Soroush Omidvartehrani, Arash Dargahi Nobari, Davood Rafiei. Web Conference (WWW) 2025, Sydney, Australia.
+WebTableX: Efficiently Discovering Web Table Transformations Through Sampling. *Soroush Omidvartehrani*, Arash Dargahi Nobari, Davood Rafiei. Web Conference (WWW) 2025, Sydney, Australia.
 
-GXJoin: Generalized Cell Transformations for Explainable Joinability. Soroush Omidvartehrani, Arash Dargahi Nobari, Davood Rafiei. European Conference on Advances in Databases and Information Systems (ADBIS) 2024, Bayonne, France.
+GXJoin: Generalized Cell Transformations for Explainable Joinability. *Soroush Omidvartehrani*, Arash Dargahi Nobari, Davood Rafiei. European Conference on Advances in Databases and Information Systems (ADBIS) 2024, Bayonne, France.
 
-Discovering and Integrating Tabular Data. Davood Rafiei, Arash Dargahi Nobari, Soroush Omidvartehrani. Tabular Data Analysis (TaDA) Workshop @ VLDB 2023, Vancouver, Canada.
+Discovering and Integrating Tabular Data. Davood Rafiei, Arash Dargahi Nobari, *Soroush Omidvartehrani*. Tabular Data Analysis (TaDA) Workshop @ VLDB 2023, Vancouver, Canada.
 
-Online Electricity Theft Detection Framework for Large-Scale Smart Grid Data. Soroush Omidvartehrani, Afshin Shahrestani, Mohammad Hossein Yaghmaee Moghaddam. Electric Power Systems Research Journal, 2022.
+Online Electricity Theft Detection Framework for Large-Scale Smart Grid Data. *Soroush Omidvartehrani*, Afshin Shahrestani, Mohammad Hossein Yaghmaee Moghaddam. Electric Power Systems Research Journal, 2022.
 
-Filter Based Time-Series Anomaly Detection in AMI using AI Approaches. Alireza Rahimi, Afshin Shahrestani, Sina Ramezani, Pedram Zamani, Soroush Omidvartehrani, Mohammad Hossein Yaghmaee Moghaddam. 5th International Conference on Internet of Things and Applications, 2021, Isfahan, Iran.
+Filter Based Time-Series Anomaly Detection in AMI using AI Approaches. Alireza Rahimi, Afshin Shahrestani, Sina Ramezani, Pedram Zamani, *Soroush Omidvartehrani*, Mohammad Hossein Yaghmaee Moghaddam. 5th International Conference on Internet of Things and Applications, 2021, Isfahan, Iran.
 
-Anomaly in Power Consumption (in Persian). Soroush Omidvartehrani, Mohammad Hossein Yaghmaee Moghaddam. Tolooe Majd, ISBN: 978-622-7605-38-9, 2021, Iran.
+Anomaly in Power Consumption (in Persian). *Soroush Omidvartehrani*, Mohammad Hossein Yaghmaee Moghaddam. Tolooe Majd, ISBN: 978-622-7605-38-9, 2021, Iran.
 
-Decision Tree based Electricity Theft Detection in Smart Grid. Soroush Omidvartehrani, Mohammad Hossein Yaghmaee Moghaddam, Mohsen Asadi. 4th International Conference on Internet of Things and Applications, 2020, Mashhad, Iran.
+Decision Tree based Electricity Theft Detection in Smart Grid. *Soroush Omidvartehrani*, Mohammad Hossein Yaghmaee Moghaddam, Mohsen Asadi. 4th International Conference on Internet of Things and Applications, 2020, Mashhad, Iran.
 
-Extracting Effective Features for Descriptive Analysis of Household Energy Consumption using Smart Home Data. Hadise Moradi, Soroush Omidvartehrani, Behshid Behkamal, Haleh Amintoosi. High Performance Computing and Big Data Analytics Congress, 2019, Tehran, Iran.
+Extracting Effective Features for Descriptive Analysis of Household Energy Consumption using Smart Home Data. Hadise Moradi, *Soroush Omidvartehrani*, Behshid Behkamal, Haleh Amintoosi. High Performance Computing and Big Data Analytics Congress, 2019, Tehran, Iran.
 
-Analysis of electricity consumption in smart homes using time hierarchy (in Persian). Soroush Omidvartehrani, Hadise Moradi, Behshid Behkamal, Haleh Amintoosi. 3rd International Conference on Internet of Things and Applications, 2019, Isfahan, Iran.
+Analysis of electricity consumption in smart homes using time hierarchy (in Persian). *Soroush Omidvartehrani*, Hadise Moradi, Behshid Behkamal, Haleh Amintoosi. 3rd International Conference on Internet of Things and Applications, 2019, Isfahan, Iran.
 
-FUMBOT: Design, Implementation and Detection. Soroush Omidvartehrani, Haleh Amintoosi. 9th OIC-CERT Annual Conference & 4th Conference on Cyberspace Security Incidents and Vulnerabilities, 2018, Shiraz, Iran.
+FUMBOT: Design, Implementation and Detection. *Soroush Omidvartehrani*, Haleh Amintoosi. 9th OIC-CERT Annual Conference & 4th Conference on Cyberspace Security Incidents and Vulnerabilities, 2018, Shiraz, Iran.
+
 
 ## 
 
 Word cloud from my recent papers:
 
-<img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 67%;" alt="Word Cloud">
+<img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 99%;" alt="Word Cloud">
 
 Last update: Sep 2025
 
