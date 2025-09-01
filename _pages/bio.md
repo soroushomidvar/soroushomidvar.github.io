@@ -48,7 +48,7 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 
 **Extracting Effective Features for Descriptive Analysis of Household Energy Consumption using Smart Home Data.** Hadise Moradi, *Soroush Omidvartehrani*, Behshid Behkamal, Haleh Amintoosi. High Performance Computing and Big Data Analytics Congress, 2019, Tehran, Iran.
 
-**Analysis of electricity consumption in smart homes using time hierarchy (in Persian).** *Soroush Omidvartehrani*, Hadise Moradi, Behshid Behkamal, Haleh Amintoosi. 3rd International Conference on Internet of Things and Applications, 2019, Isfahan, Iran.
+**Analysis of Electricity Consumption Patterns in Smart Homes Using Temporal Hierarchies (in Persian).** *Soroush Omidvartehrani*, Hadise Moradi, Behshid Behkamal, Haleh Amintoosi. 3rd International Conference on Internet of Things and Applications, 2019, Isfahan, Iran.
 
 **FUMBOT: Design, Implementation and Detection.** *Soroush Omidvartehrani*, Haleh Amintoosi. 9th OIC-CERT Annual Conference & 4th Conference on Cyberspace Security Incidents and Vulnerabilities, 2018, Shiraz, Iran.
 
