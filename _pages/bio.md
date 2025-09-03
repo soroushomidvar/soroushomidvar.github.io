@@ -26,7 +26,7 @@ latest_posts:
 
 <div align="justify">
 Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [University of Alberta](http://www.ualberta.ca), researching example-driven data wrangling. Specifically, I study how to automate wrangling tasks such as data transformation and missing data imputation using a zoom-in/zoom-out approach: zooming in on a few informative examples that hold enough information for the task, and zooming out to generalize and apply the learned patterns across the data.
-</div>
+
 
 ## Recent Publications
 
@@ -41,6 +41,7 @@ Ph.D. candidate in [Computing Science](http://www.cs.ualberta.ca) at the [Univer
 <img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 99%;" alt="Word Cloud">
 
 Last update: Aug 2025
+</div>
 
 <!---
 <img src="https://soroushomidvar.github.io/assets/img/wordcloud.jpg" style="width: 65%;" alt="Word Cloud">
