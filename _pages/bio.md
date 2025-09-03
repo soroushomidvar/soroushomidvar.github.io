@@ -45,6 +45,7 @@ Ph.D. candidate in <a href="http://www.cs.ualberta.ca">Computing Science</a> at 
 <div align="justify">
 <img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 99%;" alt="Word Cloud">
 
+<br>
 Last update: Aug 2025
 </div>
 
