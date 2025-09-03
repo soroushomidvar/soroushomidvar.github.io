@@ -27,15 +27,16 @@ latest_posts:
 <div align="justify">
 Ph.D. candidate in <a href="http://www.cs.ualberta.ca">Computing Science</a> at the <a href="http://www.ualberta.ca">University of Alberta</a>, researching example-driven data wrangling. Specifically, I study how to automate wrangling tasks such as data transformation and missing data imputation using a zoom-in/zoom-out approach: zooming in on a few informative examples that hold enough information for the task, and zooming out to generalize and apply the learned patterns across the data.
 </div>
+<br>
 
 ## Recent Publications
 
 <div align="justify">
-<b>WebTableX: Efficiently Discovering Web Table Transformations Through Sampling.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. Web Conference (WWW) 2025, Sydney, Australia.
+<b>WebTableX: Efficiently Discovering Web Table Transformations Through Sampling.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. Web Conference (WWW) 2025, Sydney, Australia. <br>
 
-<b>GXJoin: Generalized Cell Transformations for Explainable Joinability.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. European Conference on Advances in Databases and Information Systems (ADBIS) 2024, Bayonne, France.
+<b>GXJoin: Generalized Cell Transformations for Explainable Joinability.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. European Conference on Advances in Databases and Information Systems (ADBIS) 2024, Bayonne, France. <br>
 
-<b>Discovering and Integrating Tabular Data.</b> Davood Rafiei, Arash Dargahi Nobari, <i>Soroush Omidvartehrani</i>. Tabular Data Analysis (TaDA) Workshop @ VLDB 2023, Vancouver, Canada.
+<b>Discovering and Integrating Tabular Data.</b> Davood Rafiei, Arash Dargahi Nobari, <i>Soroush Omidvartehrani</i>. Tabular Data Analysis (TaDA) Workshop @ VLDB 2023, Vancouver, Canada. <br>
 </div>
 
 ##  Papers in Words
