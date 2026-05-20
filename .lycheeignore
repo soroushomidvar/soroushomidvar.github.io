@@ -1,2 +1,12 @@
 linkedin.com
 reddit.com
+
+# Sites that block bots/crawlers
+ualberta.ca
+cs.ualberta.ca
+docs.conda.io
+unsplash.com
+scholar.google.com
+
+# Template documentation references
+_pages/about.md
