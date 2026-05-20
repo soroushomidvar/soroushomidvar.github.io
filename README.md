@@ -1,6 +1,6 @@
 # soroushomidvar.com
 
-Personal academic website of Soroush Omidvartehrani.
+My personal website!
 
 ## License
 
