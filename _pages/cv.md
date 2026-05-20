@@ -4,11 +4,31 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 2
-redirect: true
 ---
 
-<meta http-equiv="refresh" content="0;url=https://github.com/soroushomidvar/cv/blob/master/Resume.pdf">
+<style>
+.pdf-container {
+  width: 100%;
+  height: 85vh;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.pdf-download {
+  margin-top: 1rem;
+  text-align: center;
+}
+</style>
 
-If you are not redirected automatically, click <a href="https://github.com/soroushomidvar/cv/blob/master/Resume.pdf" target="_blank">here</a>.
+<div class="pdf-container">
+  <iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/soroushomidvar/cv/master/Resume.pdf&embedded=true"></iframe>
+</div>
 
-<!-- https://nbviewer.org/github/soroushomidvar/cv/blob/master/Resume.pdf -->
+<p class="pdf-download">
+  <a href="https://raw.githubusercontent.com/soroushomidvar/cv/master/Resume.pdf" target="_blank" download>Download CV (PDF)</a>
+</p>
