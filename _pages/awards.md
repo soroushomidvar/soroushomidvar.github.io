@@ -7,6 +7,7 @@ nav: true
 nav_order: 4
 redirect: false
 ---
+
 <p>
   - Graduate Student Teaching Award, University of Alberta (<a href="https://soroushomidvar.github.io/assets/img/Teaching-Award-25.jpg">2025</a>, <a href="https://soroushomidvar.github.io/assets/img/Teaching-Award-26.jpg">2026</a>)
 </p>

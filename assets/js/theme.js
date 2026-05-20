@@ -210,7 +210,7 @@ let transTheme = () => {
 let determineThemeSetting = () => {
   // let themeSetting = localStorage.getItem("theme");
   // if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "light";
+  themeSetting = "light";
   // }
   return themeSetting;
 };

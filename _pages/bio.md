@@ -2,8 +2,7 @@
 layout: about
 title: Bio
 permalink: /
-subtitle: 
-
+subtitle:
 
 profile:
   align: right
@@ -37,10 +36,11 @@ Ph.D. candidate in <a href="http://www.cs.ualberta.ca">Computing Science</a> at 
 <b>GXJoin: Generalized Cell Transformations for Explainable Joinability.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. European Conference on Advances in Databases and Information Systems (ADBIS) 2024, Bayonne, France. <br><br>
 
 <b>Discovering and Integrating Tabular Data.</b> Davood Rafiei, Arash Dargahi Nobari, <i>Soroush Omidvartehrani</i>. Tabular Data Analysis (TaDA) Workshop @ VLDB 2023, Vancouver, Canada. <br>
+
 </div>
 <br>
 
-##  Papers in Words
+## Papers in Words
 
 <div align="justify">
 <img src="https://soroushomidvar.com/assets/img/wordcloud.jpg" style="display: block; margin: 0 auto; width: 99%;" alt="Word Cloud">
