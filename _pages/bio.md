@@ -31,7 +31,7 @@ Ph.D. candidate in <a href="http://www.cs.ualberta.ca">Computing Science</a> at 
 ## Recent Publications
 
 <div align="justify">
-<b>LDI: Localized Data Imputation for Text-Rich Tables.</b> <i>Soroush Omidvartehrani</i>, Davood Rafiei. Tabular Data Analysis (TaDA) Workshop @ VLDB 2026, Boston, USA. <br>
+<b>LDI: Localized Data Imputation for Text-Rich Tables.</b> <i>Soroush Omidvartehrani</i>, Davood Rafiei. Tabular Data Analysis (TaDA) Workshop @ VLDB 2026, Boston, USA. <br><br>
   
 <b>WebTableX: Efficiently Discovering Web Table Transformations Through Sampling.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. Web Conference (WWW) 2025, Sydney, Australia. <br><br>
 
