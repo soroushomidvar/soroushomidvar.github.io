@@ -26,9 +26,9 @@ nav_order: 2
 </style>
 
 <div class="pdf-container">
-  <iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/soroushomidvar/cv/master/Resume.pdf&embedded=true"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https://github.com/soroushomidvar/resume/blob/master/Resume.pdf&embedded=true"></iframe>
 </div>
 
 <p class="pdf-download">
-  <a href="https://raw.githubusercontent.com/soroushomidvar/cv/master/Resume.pdf" target="_blank" download>Download CV (PDF)</a>
+  <a href="https://github.com/soroushomidvar/resume/blob/master/Resume.pdf" target="_blank" download>Download CV (PDF)</a>
 </p>
