@@ -1,34 +1,14 @@
 ---
 layout: page
 permalink: /cv/
-title: CV
-nav: true
-nav_order: 2
+title: Resume
+nav: false
+sitemap: false
 ---
 
-<style>
-.pdf-container {
-  width: 100%;
-  height: 85vh;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.pdf-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-.pdf-download {
-  margin-top: 1rem;
-  text-align: center;
-}
-</style>
+<!-- The page moved to /resume/; this stub keeps older links (email signatures,
+     papers, LinkedIn) from 404ing. Safe to delete once they have aged out. -->
 
-<div class="pdf-container">
-  <iframe src="https://docs.google.com/viewer?url=https://github.com/soroushomidvar/resume/blob/master/Resume.pdf&embedded=true"></iframe>
-</div>
+<meta http-equiv="refresh" content="0;url={{ '/resume/' | relative_url }}" />
 
-<p class="pdf-download">
-  <a href="https://github.com/soroushomidvar/resume/blob/master/Resume.pdf" target="_blank" download>Download CV (PDF)</a>
-</p>
+If you are not redirected automatically, click <a href="{{ '/resume/' | relative_url }}">here</a>.
