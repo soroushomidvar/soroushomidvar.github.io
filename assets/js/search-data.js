@@ -9,14 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-card",
-          title: "Card",
-          description: "Scan, save, or share my contact details.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/card/";
-          },
-        },{id: "nav-resume",
+  },{id: "nav-resume",
           title: "Resume",
           description: "",
           section: "Navigation",
@@ -36,6 +29,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
+          },
+        },{id: "nav-card",
+          title: "Card",
+          description: "Scan, save, or share my contact details.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/card/";
           },
         },{id: "post-latex-learning-v2-1",
       
