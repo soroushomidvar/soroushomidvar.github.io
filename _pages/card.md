@@ -4,7 +4,7 @@ permalink: /card/
 title: Card
 description: Scan, save, or share my contact details.
 nav: true
-nav_order: 2
+nav_order: 6
 # One-line research pitch shown under the affiliation. Blank hides it entirely.
 pitch:
 ---
