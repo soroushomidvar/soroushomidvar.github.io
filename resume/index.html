@@ -6,10 +6,20 @@
     var box = document.getElementById("resume-viewer");
     if (!box) return;
 
+    // Built with DOM calls rather than an HTML string: a link written as
+    // markup inside a JS string reads as a real link to static scanners, and
+    // the concatenated URL then fails the repo's link checker.
     function fail() {
-      box.innerHTML =
-        '<p class="pdf-status">The preview could not be loaded. ' +
-        '<a href="' + SRC + '">Open the resume directly</a>.</p>';
+      var msg = document.createElement("p");
+      msg.className = "pdf-status";
+      msg.appendChild(document.createTextNode("The preview could not be loaded. "));
+      var link = document.createElement("a");
+      link.href = SRC;
+      link.textContent = "Open the resume directly";
+      msg.appendChild(link);
+      msg.appendChild(document.createTextNode("."));
+      box.innerHTML = "";
+      box.appendChild(msg);
     }
 
     // Don't leave "Loading…" on screen forever if the request stalls.
