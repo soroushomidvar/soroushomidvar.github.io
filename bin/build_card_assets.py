@@ -28,6 +28,9 @@ QR_OUT = ROOT / "assets" / "img" / "card-qr.svg"
 # over conference wifi. 240px is plenty for a contact-card avatar.
 PHOTO_PX = 240
 
+# Free-text note saved with the contact. Blank omits the field entirely.
+NOTE = ""
+
 
 def escape(value):
     """Escape a vCard TEXT value (RFC 2426 sec. 2)."""
@@ -83,10 +86,11 @@ def build_vcard():
         "URL:https://orcid.org/0000-0002-3390-5194",
         "X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/soroushomidvar",
         "X-SOCIALPROFILE;type=github:https://github.com/soroushomidvar",
-        f"NOTE:{escape('Researching example-driven data wrangling: automating data transformation and missing-value imputation from a handful of examples.')}",
-        f"PHOTO;ENCODING=b;TYPE=JPEG:{photo_b64()}",
-        "END:VCARD",
     ]
+    if NOTE:
+        lines.append(f"NOTE:{escape(NOTE)}")
+    lines.append(f"PHOTO;ENCODING=b;TYPE=JPEG:{photo_b64()}")
+    lines.append("END:VCARD")
     return "\r\n".join(fold(line) for line in lines) + "\r\n"
 
 
