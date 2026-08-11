@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WebTableX — Efficiently Discovering Web Table Transformations Through Sampling
+title: "WebTableX: Efficiently Discovering Web Table Transformations Through Sampling"
 date: 2025-05-23 10:00:00
 description: Sampling a few representative rows to find join rules much faster
 permalink: /posts/webtablex/
