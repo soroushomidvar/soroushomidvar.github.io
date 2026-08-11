@@ -40,7 +40,7 @@ sections:
 
 Soroush Omidvartehrani is a Ph.D. candidate in Computing Science at the University of Alberta, advised by Dr. Davood Rafiei in the Data and Language Intelligence (DaLI) Lab. He works on example-driven data wrangling: getting messy, real-world tables into a usable state without a human writing the rules by hand.
 
-Across his papers that covers six tasks: data transformation, data imputation, error detection, schema matching, entity matching, and anomaly detection. He increasingly approaches them with large language models and retrieval — retrieval-augmented generation, in-context learning, and the question of which few examples are worth putting in front of a model.
+Across his recent papers that covers six tasks: data transformation, data imputation, error detection, schema matching, entity matching, and anomaly detection. He increasingly approaches them with large language models and retrieval — retrieval-augmented generation, in-context learning, and the question of which few examples are worth putting in front of a model.
 
 His stated research interests are LLM-based data systems, data wrangling, and applied machine learning. Alongside the Ph.D. he works as a Data Scientist at Data on Motion Inc. in Toronto.
 

@@ -31,13 +31,13 @@ Good things to ask about: the research direction, any of the papers and how they
 
 ## Code and data {#code}
 
-Yes. His GitHub account is soroushomidvar. Code and datasets for GXJoin and WebTableX are released together in one repository covering both papers, and LDI and EdgeLM each have their own.
+His GitHub account is soroushomidvar. Code and datasets for GXJoin and WebTableX are released together in one repository covering both papers, and LDI and EdgeLM each have their own.
 
 GXJoin is evaluated on two public transformation benchmarks: a web-table benchmark assembled from search-engine results, and a spreadsheet benchmark built from data-cleaning problems that users posted on Microsoft Excel forums. WebTableX reports on two real-world web datasets, one drawn from webpage content and one from organizational forums. LDI is evaluated on a mix of real and synthetic tables.
 
 ## How to cite the papers {#cite}
 
-The main papers are:
+The recent papers are:
 
 - EdgeLM: Edge Demonstrations for Language Models' Table Understanding. Soroush Omidvartehrani, Mohammadamin Habibollah, Mohammadreza Daviran and Davood Rafiei. Preprint arXiv:2608.04390, August 2026.
 - LDI: Localized Data Imputation for Text-Rich Tables. Soroush Omidvartehrani and Davood Rafiei. Tabular Data Analysis (TaDA) Workshop at VLDB 2026. Preprint arXiv:2506.16616.
