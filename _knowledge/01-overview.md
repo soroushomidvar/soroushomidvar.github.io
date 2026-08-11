@@ -74,10 +74,10 @@ The same problem appears with missing values in text-rich tables, where the info
 
 ## Where to start reading {#reading}
 
-For a first read, GXJoin is the most self-contained and the most thoroughly evaluated: it sets out the transformation language and the generalization ideas the later work builds on, and its preprint is freely available.
+Start with EdgeLM. It is the newest, the most general, and the best single entry point to the current direction: rather than treating one wrangling operation, it asks which examples are worth putting in front of a language model at all, and evaluates that across five tasks, fifteen datasets and five models. The preprint is freely available on arXiv.
 
-WebTableX is best read second, as a short follow-up that makes the same pipeline dramatically faster by sampling rows before the search begins.
+LDI is the natural second read. It applies the same instinct to one problem in depth — assembling a small, targeted context for each missing value — and is where the localized-context idea is worked out most fully. Its preprint is on arXiv too.
 
-LDI is the one to read for the current direction: it moves from string transformations to LLM-driven imputation and is where the localized-context idea is developed most fully. Its preprint is on arXiv.
+GXJoin is the one to read for the foundations. It is the most self-contained and the most thoroughly evaluated of the four, and it sets out the transformation language and the generalization ideas the earlier line of work is built on. It uses no language model, which makes the contrast with EdgeLM and LDI the clearest way to see how the research has moved.
 
-EdgeLM is the newest, posted as a preprint in August 2026, and the most general: it is about which examples to put in front of a language model for table tasks at all, rather than about one wrangling operation.
+WebTableX is a short follow-up to GXJoin, worth reading straight afterwards: it makes the same pipeline one to two orders of magnitude faster by sampling rows before the search begins.
