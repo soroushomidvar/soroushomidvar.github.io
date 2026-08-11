@@ -44,7 +44,51 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/card/";
           },
-        },{id: "post-latex-learning-v2-1",
+        },{id: "post-edgelm-edge-demonstrations-for-language-models-39-table-understanding",
+      
+        title: "EdgeLM — Edge Demonstrations for Language Models&#39; Table Understanding",
+      
+      description: "Choosing demonstrations that show a model where the hard distinctions lie",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/posts/edgelm/";
+        
+      },
+    },{id: "post-ldi-localized-data-imputation-for-text-rich-tables",
+      
+        title: "LDI — Localized Data Imputation for Text-Rich Tables",
+      
+      description: "Building a small, targeted context for each missing value",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/posts/ldi/";
+        
+      },
+    },{id: "post-webtablex-efficiently-discovering-web-table-transformations-through-sampling",
+      
+        title: "WebTableX — Efficiently Discovering Web Table Transformations Through Sampling",
+      
+      description: "Sampling a few representative rows to find join rules much faster",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/posts/webtablex/";
+        
+      },
+    },{id: "post-gxjoin-generalized-cell-transformations-for-explainable-joinability",
+      
+        title: "GXJoin — Generalized Cell Transformations for Explainable Joinability",
+      
+      description: "Learning general join rules from a few examples",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/posts/gxjoin/";
+        
+      },
+    },{id: "post-latex-learning-v2-1",
       
         title: "LaTeX Learning v2.1",
       
