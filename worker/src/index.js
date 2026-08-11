@@ -157,7 +157,7 @@ export default {
     // would mean the model inventing something, so decline for free instead.
     if (!matched || passages.length === 0) {
       const message =
-        "That does not look like something this site covers. Try asking about Soroush's research on data wrangling, one of his papers, his background, or his teaching.";
+        "That does not look like something this site covers. Try asking about Soroush's research on data wrangling, one of his papers, or his background.";
       return wantsStream ? streamCanned(message, cors) : json({ answer: message, sources: [], grounded: false }, 200, cors);
     }
 
