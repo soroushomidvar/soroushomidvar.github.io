@@ -34,9 +34,15 @@ import { buildIndex, retrieve } from "./retrieval.js";
 // deprecate max_tokens; older Llama-family ones are legacy. Reading `.response`
 // off an openai-shaped reply yields undefined, which looks exactly like an
 // empty answer.
+//
+// Reasoning models are disqualified regardless of price. glm-4.7-flash and
+// qwen3-30b spend the output budget on hidden reasoning and then return
+// `content: null` — measured, not assumed — so they produce nothing to show and
+// bill for the privilege. Every model below was checked to return usable,
+// correctly cited text for this prompt.
 const DEFAULT_MODELS = [
-  { id: "@cf/zai-org/glm-4.7-flash", schema: "openai" },
   { id: "@cf/google/gemma-4-26b-a4b-it", schema: "openai" },
+  { id: "@cf/ibm-granite/granite-4.0-h-micro", schema: "legacy" },
   { id: "@cf/meta/llama-3.2-3b-instruct", schema: "legacy" },
 ];
 
@@ -272,8 +278,12 @@ async function runOnce(env, models, messages) {
       const result = await env.AI.run(model.id, { messages, ...inferenceOptions(model) });
       const text = answerText(result);
       if (text) return { text };
+      console.error(`model ${model.id} returned no text:`, JSON.stringify(result).slice(0, 500));
     } catch (error) {
       lastError = String(error?.message || error);
+      // Visitors get a generic message; `wrangler tail` gets the real one.
+      // Without this a model-side rejection is indistinguishable from an outage.
+      console.error(`model ${model.id} failed:`, lastError);
       if (isBudgetError(lastError)) return { error: QUOTA_MESSAGE };
     }
   }
@@ -324,6 +334,7 @@ async function streamAnswer(env, models, messages, sources, cors) {
       }
     } catch (error) {
       lastError = String(error?.message || error);
+      console.error(`model ${model.id} failed to stream:`, lastError);
       if (isBudgetError(lastError)) {
         lastError = QUOTA_MESSAGE;
         break;
@@ -382,13 +393,19 @@ async function streamAnswer(env, models, messages, sources, cors) {
             }
           }
         }
-        // Cloudflare documents that stream:true yields text/event-stream, but
-        // not the shape of each frame, so the parse above is written against
-        // observed behaviour rather than a contract. If that shape ever
-        // changes, fall back to a plain non-streaming call: slower, but the
-        // visitor still gets their answer instead of a blank box.
+        // A stream that opened fine but yielded nothing. Two causes seen in
+        // practice: an SSE frame shape this parser does not know (Cloudflare
+        // documents that stream:true returns text/event-stream but not what is
+        // in each frame), and a reasoning model that spends its whole budget
+        // thinking and returns no content at all.
+        //
+        // So retry non-streaming, and critically include the models *after*
+        // this one — the loop above committed to the first model that returned
+        // a stream, which is the wrong one to keep asking if it has nothing to
+        // say.
         if (!emitted) {
-          const fallback = await runOnce(env, [usedModel], messages);
+          const remaining = models.slice(models.indexOf(usedModel));
+          const fallback = await runOnce(env, remaining, messages);
           if (fallback.text) {
             controller.enqueue(encoder.encode(sse("token", { t: fallback.text })));
           } else {

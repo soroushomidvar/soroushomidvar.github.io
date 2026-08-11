@@ -145,7 +145,9 @@ ask:
   # URL of the Cloudflare Worker that answers questions (see worker/README.md).
   # Leave blank and /ask/ still works: it falls back to returning the passages
   # from _knowledge/ that match the question, without a generated answer.
-  endpoint: # e.g. https://ask-my-research.<subdomain>.workers.dev/ask
+  # Served from this site's own domain, so the request is same-origin and CORS
+  # never applies. The Worker also answers on its workers.dev URL.
+  endpoint: https://soroushomidvar.com/api/ask
   placeholder: What would you like to know?
   suggestions:
     - What is Soroush's PhD about?

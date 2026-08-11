@@ -120,24 +120,35 @@ output tokens cost far more than input tokens. At roughly 2,000 input and 400
 output tokens per answer, the difference between models is the difference
 between a page that works all month and one that stops before lunch:
 
-| Model                                      | ≈ neurons/answer | ≈ answers/day |
-| ------------------------------------------ | ---------------: | ------------: |
-| `@cf/ibm-granite/granite-4.0-h-micro`      |                7 |         1,400 |
-| `@cf/meta/llama-3.2-3b-instruct`           |               21 |           460 |
-| `@cf/zai-org/glm-4.7-flash` _(default)_    |               26 |           390 |
-| `@cf/google/gemma-4-26b-a4b-it`            |               29 |           340 |
-| `@cf/openai/gpt-oss-120b`                  |               91 |           110 |
-| `@cf/meta/llama-3.3-70b-instruct-fp8-fast` |              135 |            74 |
+| Model                                       | ≈ neurons/answer | ≈ answers/day | Usable here          |
+| ------------------------------------------- | ---------------: | ------------: | -------------------- |
+| `@cf/ibm-granite/granite-4.0-h-micro`       |                7 |         1,400 | yes                  |
+| `@cf/meta/llama-3.2-3b-instruct`            |               21 |           460 | yes                  |
+| `@cf/zai-org/glm-4.7-flash`                 |               26 |           390 | no — reasoning model |
+| `@cf/google/gemma-4-26b-a4b-it` _(default)_ |               29 |           340 | yes                  |
+| `@cf/qwen/qwen3-30b-a3b-fp8`                |               21 |           460 | no — reasoning model |
+| `@cf/openai/gpt-oss-120b`                   |               91 |           110 | no — reasoning model |
+| `@cf/meta/llama-3.3-70b-instruct-fp8-fast`  |              135 |            74 | yes, at 4× the cost  |
 
-The default is `@cf/zai-org/glm-4.7-flash`. For a task that mostly restates
-retrieved text in the visitor's words, it is a better trade than the 70B model
-at five times the cost. Avoid the `gpt-oss-*` models here: they are reasoning
-models and spend output neurons on hidden thinking you never display.
+**Avoid reasoning models here.** They spend the output budget on hidden
+thinking and then return `content: null`, so you pay for tokens no visitor ever
+sees and get an empty answer. This is measured, not theoretical: `glm-4.7-flash`
+and `qwen3-30b-a3b-fp8` both did exactly that on this prompt. Every model marked
+"yes" was checked against the live API and returned usable, correctly cited
+prose.
 
-`src/index.js` tries three models in order, so a deprecated ID degrades to the
-next one rather than taking the page down. Cloudflare retires model IDs on a
-schedule — if answers stop working, check the model against the current
-[catalog](https://developers.cloudflare.com/workers-ai/models/) first.
+The default is `@cf/google/gemma-4-26b-a4b-it` — the best writer of the three
+that work, at a tenth the cost of the 70B model. `granite-4.0-h-micro` is nearly
+as good and five times cheaper again, so switch to it if the daily allowance ever
+becomes the binding constraint.
+
+`src/index.js` tries three models in order, and moves on if one produces no
+usable text — not just if it errors. A deprecated ID or a model that has quietly
+become a reasoning model degrades to the next rather than taking the page down.
+Cloudflare retires model IDs on a schedule, so if answers stop working, check
+the model against the current
+[catalog](https://developers.cloudflare.com/workers-ai/models/) first, and run
+`npx wrangler tail` — failures are logged with the model that caused them.
 
 ### The two schemas
 
