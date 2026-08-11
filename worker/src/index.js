@@ -91,7 +91,17 @@ export default {
     const path = url.pathname.replace(/\/+$/, "") || "/";
 
     if (request.method === "GET" && (path === "/" || path.endsWith("/health"))) {
-      return json({ ok: true, service: "ask-my-research" }, 200, cors);
+      // Reports which corpus this isolate is holding. Two routes to the same
+      // Worker can serve different vintages after a content push, and without
+      // this the only symptom is an answer that is subtly out of date.
+      let corpus = null;
+      try {
+        const index = await loadIndex(env, ctx, url.searchParams.has("refresh"));
+        corpus = { chunks: index.total, generated_at: index.corpus?.generated_at || null };
+      } catch (error) {
+        corpus = { error: String(error?.message || error) };
+      }
+      return json({ ok: true, service: "ask-my-research", corpus }, 200, cors);
     }
 
     if (!path.endsWith("/ask")) {
@@ -136,7 +146,7 @@ export default {
 
     let index;
     try {
-      index = await loadIndex(env, ctx);
+      index = await loadIndex(env, ctx, url.searchParams.has("refresh"));
     } catch (error) {
       return json({ error: "The research corpus could not be loaded right now." }, 503, cors);
     }
@@ -179,15 +189,22 @@ export default {
 
 /* ------------------------------------------------------------------ corpus */
 
-async function loadIndex(env, ctx) {
+async function loadIndex(env, ctx, force) {
   const corpusUrl = env.CORPUS_URL || "https://soroushomidvar.com/assets/json/research-corpus.json";
-  const fresh = memo.index && memo.url === corpusUrl && Date.now() - memo.at < CORPUS_TTL_SECONDS * 1000;
+  const fresh = !force && memo.index && memo.url === corpusUrl && Date.now() - memo.at < CORPUS_TTL_SECONDS * 1000;
   if (fresh) return { ...memo.index, corpus: memo.corpus };
 
-  const response = await fetch(corpusUrl, {
-    // Let the edge cache absorb the reload so a burst of cold isolates does not
-    // become a burst of requests to GitHub Pages.
-    cf: { cacheTtl: CORPUS_TTL_SECONDS, cacheEverything: true },
+  // The corpus lives on this Worker's own zone, so a plain refetch can be
+  // answered from the zone's edge cache — `cacheTtl: 0` and `Cache-Control:
+  // no-cache` both proved insufficient in practice. A unique query string is
+  // the only reliable way to force a miss.
+  const target = force ? `${corpusUrl}${corpusUrl.includes("?") ? "&" : "?"}_=${Date.now()}` : corpusUrl;
+
+  const response = await fetch(target, {
+    // Normally let the edge cache absorb the reload, so a burst of cold
+    // isolates does not become a burst of requests to GitHub Pages.
+    cf: force ? { cacheTtl: 0 } : { cacheTtl: CORPUS_TTL_SECONDS, cacheEverything: true },
+    headers: force ? { "Cache-Control": "no-cache" } : undefined,
   });
   if (!response.ok) {
     // A stale copy of the same corpus beats an error page. A stale copy of a
@@ -215,7 +232,7 @@ function buildMessages(question, history, passages, corpus) {
     "Rules:",
     `- Answer only from the numbered SOURCES in the user message. They are everything you know about ${first}.`,
     "- If the sources do not answer the question, say so plainly in one sentence and mention what the site does cover. Never guess, and never fall back on general knowledge — including anything you may believe about people with similar names.",
-    "- Cite the sources you actually used inline, like [1] or [2]. Do not cite sources you did not use.",
+    "- Cite the sources you actually used inline, like [1] or [2], placed after the claim they support. Do not cite sources you did not use, and never start a sentence or paragraph with a citation marker — they are citations, not list numbers.",
     `- Refer to him as ${first}, in the third person.`,
     "- Never write URLs, email addresses, or citation counts. The page renders links itself.",
     "- Be concise and specific: at most three short paragraphs of plain prose. No preamble, no restating the question, no sign-off.",

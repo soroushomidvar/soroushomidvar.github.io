@@ -61,7 +61,13 @@
   // escaped before any markup is added back, so a model that ignores that
   // instruction and emits HTML still cannot inject anything.
   function renderAnswer(node, text, sources) {
-    var html = escapeHtml(text)
+    // Small models sometimes open a paragraph with "[2]" as though it were a
+    // list number. Asking them not to only half works, so drop a marker that
+    // begins a block — it is attached to no claim, and the source is still
+    // listed below.
+    // Only horizontal whitespace is consumed either side, so the blank line
+    // that separates two paragraphs survives.
+    var html = escapeHtml(text.replace(/(^|\n+)[ \t]*\[\d+(?:\s*,\s*\d+)*\][ \t]*/g, "$1"))
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, function (match, group) {
         var links = group
