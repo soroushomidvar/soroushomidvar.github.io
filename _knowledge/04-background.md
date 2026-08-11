@@ -45,7 +45,7 @@ Most of his published work is joint with Davood Rafiei, and several papers are a
 
 ## Industry experience {#employment}
 
-Since 2025 Soroush has worked as a Data Scientist at Data on Motion Inc. in Toronto, Canada, alongside his doctoral research.
+Since 2025 Soroush has worked as a Data Scientist at Dodona Data in Toronto, Canada, alongside his doctoral research.
 
 From 2019 to 2022 he was Project Manager at the IP-PBX Type Approval Lab in Mashhad, Iran.
 

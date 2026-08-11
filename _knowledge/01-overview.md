@@ -42,7 +42,7 @@ Soroush Omidvartehrani is a Ph.D. candidate in Computing Science at the Universi
 
 Across his recent papers that covers six tasks: data transformation, data imputation, error detection, schema matching, entity matching, and anomaly detection. He increasingly approaches them with large language models and retrieval — retrieval-augmented generation, in-context learning, and the question of which few examples are worth putting in front of a model.
 
-His stated research interests are LLM-based data systems, data wrangling, and applied machine learning. Alongside the Ph.D. he works as a Data Scientist at Data on Motion Inc. in Toronto.
+His stated research interests are LLM-based data systems, data wrangling, and applied machine learning. Alongside the Ph.D. he works as a Data Scientist at Dodona Data in Toronto.
 
 ## Research direction {#agenda}
 

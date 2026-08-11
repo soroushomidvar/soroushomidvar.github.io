@@ -50,7 +50,7 @@ The full and current list is on Google Scholar, which the publications link on t
 
 Soroush is a Ph.D. candidate, so he is not in a position to supervise students. He is reachable for research questions, collaboration on data wrangling and LLM-for-data-systems topics, and conversations about his papers.
 
-The contact card page of this site has his university email address, a downloadable vCard, a QR code, and links to his Google Scholar, GitHub, LinkedIn and ORCID profiles. He is based in Edmonton, Alberta, and also works as a Data Scientist at Data on Motion Inc. in Toronto.
+The contact card page of this site has his university email address, a downloadable vCard, a QR code, and links to his Google Scholar, GitHub, LinkedIn and ORCID profiles. He is based in Edmonton, Alberta, and also works as a Data Scientist at Dodona Data in Toronto.
 
 ## About the name {#name}
 
