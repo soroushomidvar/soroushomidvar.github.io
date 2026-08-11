@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/resume/";
           },
+        },{id: "nav-ask",
+          title: "Ask",
+          description: "Ask a question about my research and get an answer drawn from the notes on this site, with the sources it used.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ask/";
+          },
         },{id: "nav-awards",
           title: "Awards",
           description: "",
@@ -59,7 +66,32 @@ ninja.data = [{
           window.location.href = "/posts/2020-11-30-latex-v1/";
         
       },
-    },{id: "news-a-simple-inline-announcement",
+    },{id: "knowledge-overview",
+          title: 'Overview',
+          description: "",
+          section: "Knowledge",handler: () => {
+              window.location.href = "/knowledge/01-overview/";
+            },},{id: "knowledge-concepts",
+          title: 'Concepts',
+          description: "",
+          section: "Knowledge",handler: () => {
+              window.location.href = "/knowledge/02-concepts/";
+            },},{id: "knowledge-publications",
+          title: 'Publications',
+          description: "",
+          section: "Knowledge",handler: () => {
+              window.location.href = "/knowledge/03-publications/";
+            },},{id: "knowledge-background",
+          title: 'Background',
+          description: "",
+          section: "Knowledge",handler: () => {
+              window.location.href = "/knowledge/04-background/";
+            },},{id: "knowledge-practical",
+          title: 'Practical',
+          description: "",
+          section: "Knowledge",handler: () => {
+              window.location.href = "/knowledge/05-faq/";
+            },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
           section: "News",},{id: "news-a-long-announcement-with-details",
