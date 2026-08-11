@@ -55,10 +55,11 @@ Last update: Aug 2026
 
 -->
 
+## Ask
+
 <style>
-  .ask-app {
-    max-width: 46rem;
-  }
+  /* No max-width on .ask-app: on its own page the assistant was narrower than
+     the text column, but here it sits under the bio and shares its width. */
 
   /* Composer ---------------------------------------------------------- */
 
