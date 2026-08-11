@@ -24,7 +24,7 @@ latest_posts:
 ---
 
 <div align="justify">
-Ph.D. candidate in <a href="http://www.cs.ualberta.ca">Computing Science</a> at the <a href="http://www.ualberta.ca">University of Alberta</a>, researching example-driven data wrangling. Specifically, I study how to automate wrangling tasks such as data transformation and missing data imputation using a zoom-in/zoom-out approach: zooming in on a few informative examples that hold enough information for the task, and zooming out to generalize and apply the learned patterns across the data.
+Ph.D. candidate in <a href="http://www.cs.ualberta.ca">Computing Science</a> at the <a href="http://www.ualberta.ca">University of Alberta</a>, working on example-driven data wrangling. Specifically, I study how much a system can learn from a handful of well-chosen examples and how to carry what it learns across the rest of the data. I also work remotely as a Data Scientist at <a href="https://dodonadata.ai/">Dodona Data</a> in Toronto.
 </div>
 <br>
 
