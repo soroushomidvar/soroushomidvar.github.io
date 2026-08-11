@@ -238,7 +238,12 @@ let initTheme = () => {
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
+    // This header renders no toggle button, so the lookup returns null and the
+    // call below threw on every page load. Nothing downstream broke, since the
+    // media-query listener is attached before this callback runs, but a
+    // guaranteed exception makes the console useless for spotting real ones.
     const mode_toggle = document.getElementById("light-toggle");
+    if (!mode_toggle) return;
 
     mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();

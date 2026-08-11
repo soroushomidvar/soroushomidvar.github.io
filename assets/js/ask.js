@@ -30,7 +30,6 @@
   var input = document.getElementById("ask-input");
   var submit = document.getElementById("ask-submit");
   var thread = document.getElementById("ask-thread");
-  var intro = document.getElementById("ask-intro");
   var counter = document.getElementById("ask-counter");
 
   var history = [];
@@ -95,8 +94,6 @@
   /* ---------------------------------------------------------------- thread */
 
   function addTurn(question, turnId) {
-    if (intro && !intro.hidden) intro.hidden = true;
-
     // One answer on the page at a time: a new question replaces the last one
     // rather than growing a transcript. Earlier turns are still sent to the
     // assistant so follow-ups like "how does it differ?" resolve.
