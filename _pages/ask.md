@@ -167,6 +167,10 @@ nav_order: 3
     position: relative;
     display: inline-block;
     animation-delay: 0.2s;
+    /* The outer dots are pseudo-elements offset 9px either side of this 5px
+       box, so without matching margins the flex gap is measured from the box
+       and the trailing dot collides with the text. */
+    margin: 0 9px;
   }
   .ask-dots::before,
   .ask-dots::after {

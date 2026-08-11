@@ -141,8 +141,7 @@
 
     var box = el("details", "ask-sources");
     box.open = Boolean(expanded);
-    var summary = el("summary", "ask-sources-title", "Here are the passages from this site that match most closely");
-    box.appendChild(summary);
+    box.appendChild(el("summary", "ask-sources-title", "Sources"));
 
     var list = el("ol", "ask-sources-list");
     sources.forEach(function (source) {
