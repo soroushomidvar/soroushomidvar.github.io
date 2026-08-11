@@ -27,7 +27,7 @@ This page answers questions using a small set of notes about Soroush's work, kep
 
 It knows nothing beyond those notes. Questions about anything else — his opinions, unpublished work, private details, or topics unrelated to his research — will get an honest "that is not on this site" rather than a guess. It can be wrong about details even when the underlying notes are right, so the linked sources are the authority, not the generated text.
 
-Good things to ask about: the research direction, any of the papers and how they work, the concepts behind them, his background, teaching, and awards.
+Good things to ask about: the research direction, any of the papers and how they work, the concepts behind them, his background, and awards.
 
 ## Code and data {#code}
 
