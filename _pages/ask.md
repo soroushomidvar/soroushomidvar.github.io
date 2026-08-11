@@ -222,16 +222,40 @@ nav_order: 3
   }
   .ask-sources {
     margin-top: 1.5rem;
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 0.75rem;
   }
   .ask-sources-title {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-size: 0.8rem;
     color: var(--global-text-color-light);
-    margin-bottom: 0.5rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .ask-sources-title:hover {
+    color: var(--global-theme-color);
+  }
+  /* Replace the default triangle with one that can be rotated on open. */
+  .ask-sources-title::-webkit-details-marker {
+    display: none;
+  }
+  .ask-sources-title::before {
+    content: "";
+    flex: none;
+    width: 0;
+    height: 0;
+    border-left: 5px solid currentColor;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transition: transform 0.15s ease;
+  }
+  .ask-sources[open] > .ask-sources-title::before {
+    transform: rotate(90deg);
   }
   .ask-sources-list {
-    margin: 0;
+    margin: 0.9rem 0 0;
     padding-left: 1.2rem;
   }
   .ask-source {

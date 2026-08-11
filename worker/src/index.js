@@ -159,6 +159,10 @@ export default {
       doc: chunk.doc_title,
       url: chunk.url || null,
       url_label: chunk.url_label || null,
+      // The page shows these under the answer, so a visitor can read exactly
+      // what the model was given and judge the answer against it. Sending the
+      // passage rather than a snippet is the point.
+      text: chunk.text,
     }));
 
     const models = modelList(env);
@@ -268,7 +272,7 @@ const QUOTA_MESSAGE = "The free daily allowance for this assistant has been used
 // is account-wide, and the second means every request today gets the same
 // answer. Retrying would just burn latency.
 function isBudgetError(message) {
-  return /\b3036\b|\b5035\b|neuron|daily free allocation|Workers Paid/i.test(message);
+  return /\b3036\b|\b5035\b|neuron|daily free allocation|Workers (Paid|Free) plan/i.test(message);
 }
 
 async function runOnce(env, models, messages) {

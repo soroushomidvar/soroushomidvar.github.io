@@ -91,6 +91,11 @@
   function addTurn(question, turnId) {
     if (intro && !intro.hidden) intro.hidden = true;
 
+    // One answer on the page at a time: a new question replaces the last one
+    // rather than growing a transcript. Earlier turns are still sent to the
+    // assistant so follow-ups like "how does it differ?" resolve.
+    thread.textContent = "";
+
     var turn = el("div", "ask-turn");
     turn.dataset.turnId = String(turnId);
 
@@ -129,11 +134,15 @@
     });
   }
 
-  function renderSources(view, sources, heading) {
+  // Collapsed by default when there is an answer above it, open when the
+  // passages are all there is to show.
+  function renderSources(view, sources, expanded) {
     if (!sources || !sources.length) return;
 
-    var box = el("div", "ask-sources");
-    box.appendChild(el("h4", "ask-sources-title", heading || "Sources"));
+    var box = el("details", "ask-sources");
+    box.open = Boolean(expanded);
+    var summary = el("summary", "ask-sources-title", "Here are the passages from this site that match most closely");
+    box.appendChild(summary);
 
     var list = el("ol", "ask-sources-list");
     sources.forEach(function (source) {
@@ -328,7 +337,6 @@
           return;
         }
 
-        view.body.appendChild(el("p", "ask-note", "Here are the passages from this site that match most closely."));
         renderSources(
           view,
           decorate(
@@ -343,7 +351,9 @@
               };
             })
           ),
-          "Matching passages"
+          // With no assistant connected the passages are the whole answer, so
+          // do not make the visitor open them.
+          true
         );
         scrollIntoView(view.answer);
       })
@@ -422,13 +432,19 @@
     });
   });
 
-  // Clicking a citation marker highlights the source it points at.
+  // Clicking a citation marker reveals and highlights the passage it points at.
   thread.addEventListener("click", function (event) {
     var link = event.target.closest ? event.target.closest(".ask-cite") : null;
     if (!link) return;
     var target = document.getElementById(link.getAttribute("href").slice(1));
     if (!target) return;
     event.preventDefault();
+
+    // The passages are collapsed by default, so a citation has to open them or
+    // it would appear to do nothing.
+    var box = target.closest ? target.closest("details") : null;
+    if (box) box.open = true;
+
     target.classList.add("is-highlighted");
     scrollIntoView(target);
     setTimeout(function () {
