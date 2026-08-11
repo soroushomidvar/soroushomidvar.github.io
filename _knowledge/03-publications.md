@@ -44,7 +44,9 @@ When a language model is used for table tasks through in-context learning, the e
 
 EdgeLM instead retrieves what the paper calls edge evidence: examples that are relevant to the query and also informative about where the decision boundary lies. It looks for two complementary kinds. Data edges are nearby examples whose ground-truth labels differ from each other, which show the model exactly where the distinction falls. Model edges are similar examples that the deployed model has previously got wrong, which show it where it is prone to fail.
 
-The method needs no retraining and no task-specific engineering. Across five data wrangling tasks, fifteen datasets and five language models — both open-weight and proprietary — it is best or near-best in every setting, and ablations show the two kinds of edge evidence help in different ways.
+The five tasks it is evaluated on are error detection, entity matching, schema matching, data imputation and anomaly detection — treated as one family of table-centric prediction problems rather than five separate engineering problems. There are fifteen datasets and five language models: three open-weight (Qwen2.5-7B, Llama-3.1-8B, Mistral-Nemo-12B) and two proprietary (GPT-4o-mini, Gemini-3.1-flash-lite). Every strategy shares an identical prompt, demonstration pool and test set, differing only in which five demonstrations fill the slots, so the comparison isolates the choice of examples from everything else.
+
+The method needs no retraining and no task-specific engineering, and it works: best or tied-best F1 on 13 of the 15 datasets with Llama-3.1-8B. The gains are largest exactly where plain similarity retrieval is weakest — on the three anomaly-detection datasets it lifts F1 from around 0.78 to 0.85 up to 0.98 — and smallest where the task is already close to saturated, as schema matching is. It never loses to similarity.
 
 Code and datasets are at github.com/soroushomidvar/EdgeLM.
 
@@ -58,9 +60,11 @@ LDI instead builds a small, targeted context for each individual missing value, 
 
 Attribute selection. Rather than assuming clean functional dependencies, LDI looks for a relaxed, substring-level signal: a column is relevant to the target column if characteristic substrings within it are strongly associated with particular target values and do not appear elsewhere. Detecting the association at the substring level rather than the whole-value level is what makes it survive typos and inconsistent formatting — a phone area code still identifies a city whether it is written +1780, 780/, or 780-. Boilerplate that recurs across several different target values is discarded, because it distinguishes nothing.
 
-Tuple selection. Among the rows that do have a value for the target column, LDI ranks candidates by how much literal text they share with the incomplete row, measured over only the attributes selected in the first phase. It then keeps the top few while forcing their target values to differ, so the examples handed to the model are both relevant and varied rather than all pointing at the same answer.
+Tuple selection. Among the rows that do have a value for the target column, LDI ranks candidates by how much literal text they share with the incomplete row — average normalized longest common substring, computed over only the attributes selected in the first phase. It then keeps the top few while forcing their target values to differ, so the examples handed to the model are both relevant and varied rather than all pointing at the same answer.
 
-Imputation. The selected attributes and example rows go into a single prompt, and the model predicts the missing value. There is no fine-tuning and no training data.
+The choice of longest common substring over embedding similarity is deliberate and argued in the paper: embeddings can miss fine-grained patterns in long text, while substring overlap preserves the lexical structure that actually carries the signal here — a shared area code, a repeated prefix.
+
+Imputation. The selected attributes and example rows go into a single retrieval-augmented prompt, and the model predicts the missing value. There is no fine-tuning and no training data. The experiments use GPT-4o-mini as the hosted model and Llama 3.2 3B to test what happens in resource-limited settings.
 
 Because the context is assembled rather than dumped, the method explains itself: for any predicted value it can say which attributes were used, what dependency pattern justified each, and which rows served as evidence. On real and synthetic datasets LDI beats state-of-the-art imputation methods, reaching up to 8% higher accuracy with hosted LLMs and larger gains with small local models — which also makes it practical to run privately.
 
@@ -87,6 +91,8 @@ GXJoin studies joinability under syntactic transformations: two columns that can
 The paper's argument is that generality is what matters, not just correctness. A transformation that happens to fit three rows is less useful than one that fits three hundred, and a shorter rule is easier for a person to read and to trust on data it has not seen. GXJoin therefore optimizes for transformations that cover more rows and stay simple, and it treats those transformations as the explanation of the join rather than a by-product of it.
 
 Evaluated on two real-world datasets across metrics for coverage and simplicity, it outperforms the state of the art by producing fewer, simpler and more explainable transformations, while also improving join performance.
+
+GXJoin uses no language model. It is a search over a space of string operations, and the transformations it returns are the explanation — which is the property a model-based approach would give up.
 
 ## How the transformations are expressed {#transformation-language}
 

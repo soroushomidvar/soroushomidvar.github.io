@@ -3,6 +3,35 @@ title: Concepts
 order: 2
 aliases: [concept, concepts, definition, terminology, background, what is]
 sections:
+  tasks:
+    aliases:
+      [
+        tasks,
+        error detection,
+        schema matching,
+        entity matching,
+        anomaly detection,
+        deduplication,
+        record linkage,
+        data quality,
+        data cleaning,
+        what does he work on,
+      ]
+  rag:
+    aliases:
+      [
+        rag,
+        retrieval augmented generation,
+        in-context learning,
+        icl,
+        demonstrations,
+        few-shot,
+        prompt,
+        prompting,
+        embeddings,
+        vector search,
+        fine-tuning,
+      ]
   joinability:
     aliases: [joinable, joinability, equi-join, join, foreign key, linking tables, merge tables]
   transformations:
@@ -58,6 +87,32 @@ A functional dependency says that one column determines another: if two rows agr
 Strict dependencies rarely survive contact with real data. A single typo, an inconsistent format, or one genuine exception breaks the rule outright, even though the underlying relationship clearly holds. Approximate variants relax the requirement so that a relationship counts if it holds often enough, rather than always.
 
 Soroush's LDI work relaxes it further still, looking for the signal at the level of substrings inside values rather than whole values, so that differently formatted versions of the same thing still count as evidence.
+
+## The wrangling tasks {#tasks}
+
+Data wrangling is a family of related problems, and Soroush's work touches six of them.
+
+Data transformation rewrites values from one format into another, so that two sources can be joined. This is what GXJoin and WebTableX do.
+
+Data imputation fills in missing values by inferring them from the data that is present. This is LDI's subject.
+
+Error detection finds values that are wrong — a typo, an impossible date, a number in a name column — as opposed to merely missing.
+
+Schema matching decides which column in one table corresponds to which column in another, when the names do not agree.
+
+Entity matching decides whether two records refer to the same real-world thing, when neither the identifiers nor the spellings match.
+
+Anomaly detection flags records that do not fit the pattern of the rest, without a prior definition of what wrong looks like.
+
+The last four are what EdgeLM is evaluated on, alongside imputation. What unites them is that each reduces to predicting a label for some object pulled out of a table — a cell, a row, a pair of rows, a pair of columns — which is precisely why one method for choosing examples can serve all of them.
+
+## Retrieval-augmented generation {#rag}
+
+A language model asked a question straight will answer from whatever it absorbed in training, which for questions about your data is nothing useful. Retrieval-augmented generation fixes the input rather than the model: fetch the relevant material first, put it in the prompt, and let the model work from that.
+
+In-context learning is the mechanism that makes this work for structured tasks. Instead of fine-tuning, you show the model a handful of solved examples in the prompt and let it infer the pattern. The examples are called demonstrations, and which ones you pick changes the answer substantially.
+
+The standard way to pick them is similarity: retrieve the demonstrations closest to the query. Both LDI and EdgeLM interrogate that default. LDI keeps similarity but changes the measure, using substring overlap rather than embeddings because the evidence in text-rich tables is lexical. EdgeLM challenges the objective itself, arguing that the most similar examples mostly confirm what the model would already have said, and that the useful ones sit at the boundary or are cases the model has previously got wrong.
 
 ## Language models in data systems {#llms}
 
