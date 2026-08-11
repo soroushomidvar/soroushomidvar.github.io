@@ -123,7 +123,7 @@ pitch:
   <div class="contact-card">
     <img
       class="card-photo"
-      src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
+      src="{{ '/assets/img/soroush.jpg' | relative_url }}"
       alt="Soroush Omidvartehrani"
       loading="eager"
     />
