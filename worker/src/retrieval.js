@@ -123,7 +123,7 @@ function repeat(tokens, times) {
  * a model call.
  */
 export function retrieve(index, query, options = {}) {
-  const limit = options.limit ?? 6;
+  const limit = options.limit ?? 5;
   const perDocLimit = options.perDocLimit ?? 3;
   const budget = options.charBudget ?? 7000;
 
