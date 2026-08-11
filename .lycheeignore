@@ -8,6 +8,10 @@ docs.conda.io
 docs.netlify.com
 unsplash.com
 scholar.google.com
+# The WebTableX DOI resolves to the ACM Digital Library, which answers 403 to
+# automated clients. The link is fine in a browser.
+doi.org/10.1145
+dl.acm.org
 
 # Template documentation references
 _pages/about.md
