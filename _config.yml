@@ -138,6 +138,25 @@ newsletter:
   # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
+# Ask my research
+# -----------------------------------------------------------------------------
+
+ask:
+  # URL of the Cloudflare Worker that answers questions (see worker/README.md).
+  # Leave blank and /ask/ still works: it falls back to returning the passages
+  # from _knowledge/ that match the question, without a generated answer.
+  endpoint: # e.g. https://ask-my-research.<subdomain>.workers.dev/ask
+  placeholder: What would you like to know?
+  suggestions:
+    - What is Soroush's PhD about?
+    - What is his newest paper?
+    - Explain GXJoin.
+    - What is WebTableX?
+    - How does LDI handle missing values?
+    - Which paper should I read first?
+    - What has he taught?
+
+# -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
 
@@ -150,6 +169,11 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
+  # Source material for the /ask/ assistant. Never rendered as pages: the
+  # research-corpus plugin compiles these into /assets/json/research-corpus.json,
+  # which is the only thing the assistant reads.
+  knowledge:
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -197,6 +221,7 @@ exclude:
   - _pages/projects.md
   - _pages/repositories.md
   - _pages/teaching.md
+  - worker/
 keep_files:
   - CNAME
   - .nojekyll

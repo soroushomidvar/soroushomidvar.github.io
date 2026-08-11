@@ -1,0 +1,71 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ask-my-research",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-10",
+
+  // Gives the Worker a https://ask-my-research.<your-subdomain>.workers.dev URL,
+  // which is what goes into `ask.endpoint` in _config.yml.
+  "workers_dev": true,
+
+  // The Worker also answers on the site's own domain, so the browser request is
+  // same-origin and CORS never applies — and the endpoint does not depend on
+  // workers.dev being reachable from the visitor's network.
+  //
+  // Requires the zone's DNS record to be proxied (orange cloud), which it is.
+  // GitHub Pages keeps serving everything outside /api/.
+  "routes": [{ "pattern": "soroushomidvar.com/api/*", "zone_name": "soroushomidvar.com" }],
+
+  "observability": {
+    "enabled": true
+  },
+
+  // Workers AI, reachable as env.AI. No API token involved: the binding
+  // authenticates itself, which is the whole reason the model call happens here
+  // rather than in the browser.
+  "ai": {
+    "binding": "AI"
+  },
+
+  // env.RATE_LIMITER. `period` accepts only 10 or 60. Counters are per
+  // Cloudflare location rather than global and are deliberately approximate, so
+  // treat this as a brake on runaway usage, not an accounting system.
+  //
+  // Cloudflare advises against keying on IP because users share addresses. For
+  // a public page with no sign-in there is nothing better to key on, and the
+  // cost of a false positive here is one visitor waiting a minute.
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      // Any integer unique within your account, as a string. Workers sharing a
+      // namespace_id share counters.
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 12,
+        "period": 60
+      }
+    }
+  ],
+
+  "vars": {
+    // Origins allowed to call /ask. Anything else gets 403, which keeps scripted
+    // abuse off the shared daily neuron budget.
+    "ALLOWED_ORIGINS": "https://soroushomidvar.com,https://www.soroushomidvar.com,https://soroushomidvar.github.io",
+
+    // Built by the Jekyll site from _knowledge/. Editing a knowledge file and
+    // pushing is the entire content-update workflow; this Worker does not need
+    // redeploying for it.
+    "CORPUS_URL": "https://soroushomidvar.com/assets/json/research-corpus.json",
+
+    // Leave blank to use the built-in model list in src/index.js. Set it to a
+    // single model ID to override the first choice; the built-ins stay as
+    // fallbacks. See README.md for the neuron cost of each option.
+    "MODEL": "",
+
+    // Only read when MODEL is set. Workers AI runs two request/response
+    // contracts and the newer models use the OpenAI-shaped one, so an override
+    // has to say which it is: "openai" for glm / gemma-4 / qwen3 / nemotron /
+    // kimi, "legacy" (the default) for the Llama family, granite and gpt-oss.
+    "MODEL_SCHEMA": "legacy"
+  }
+}
