@@ -31,8 +31,10 @@ Ph.D. candidate in <a href="http://www.cs.ualberta.ca">Computing Science</a> at 
 ## Recent Publications
 
 <div align="justify">
+<b>EdgeLM: Edge Demonstrations for Language Models' Table Understanding.</b> <i>Soroush Omidvartehrani</i>, Mohammadamin Habibollah, Mohammadreza Daviran, Davood Rafiei. Conference of the European Chapter of the Association for Computational Linguistics (EACL) 2027. (submitted) <br><br>
+
 <b>LDI: Localized Data Imputation for Text-Rich Tables.</b> <i>Soroush Omidvartehrani</i>, Davood Rafiei. Tabular Data Analysis (TaDA) Workshop @ VLDB 2026, Boston, USA. <br><br>
-  
+
 <b>WebTableX: Efficiently Discovering Web Table Transformations Through Sampling.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. Web Conference (WWW) 2025, Sydney, Australia. <br><br>
 
 <b>GXJoin: Generalized Cell Transformations for Explainable Joinability.</b> <i>Soroush Omidvartehrani</i>, Arash Dargahi Nobari, Davood Rafiei. European Conference on Advances in Databases and Information Systems (ADBIS) 2024, Bayonne, France. <br>
